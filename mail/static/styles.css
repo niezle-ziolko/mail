@@ -1,181 +1,177 @@
 body {
-  font-family: Nunito, Arial;
-  height: 95vh;
-  background-color: #f0f3f5;
+    height: 95vh;
+    font-family: Nunito, Arial;
+    background-color: #f0f3f5;
 }
 h3 {
-  margin-top: 0;
+    margin-top: 0;
 }
 a {
-  color: #0b800c;
+    color: #0b800c;
 }
 button {
-  font-family: Nunito, Arial;
-  width: 100%;
-  margin-top: 25px;
-  font-size: 15px;
-  padding: 12px;
-  border: 1px solid transparent;
-  border-radius: 25px;
-  font-weight: bold;
-  color: white;
-  background-color: #0b800c;
-  cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+    font-family: Nunito, Arial;
+    background-color: #0b800c;
+    border: 1px solid transparent;
 }
 textarea {
-  min-height: 300px;
+    min-height: 100%;
 }
 input {
-  font-family: Nunito, Arial;
+    font-family: Nunito, Arial;
 }
 input:disabled {
-  background-color: #f0f3f5;
+    background-color: #f0f3f5;
 }
 .container-login {
-  width: 325px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 30px;
-  margin-left: auto;
-  min-height: 550px;
-  text-align: center;
-  margin-right: auto;
-  border-radius: 16px;
-  align-content: center;
-  background-color: #fff;
-  border-top: 1px solid #f1f1f5;
-  box-shadow: 0 0 1px 0 rgba(29,34,40,.1),0 2px 4px 0 rgba(29,34,40,.08);
-  position: absolute;
-  bottom: 150px;
-  top: 150px;
-  left: 0;
-  right: 0;
+    left: 0;
+    right: 0;
+    top: 150px;
+    width: 325px;
+    height: 500px;
+    bottom: 150px;
+    display: flex;
+    padding: 30px 30px;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+    position: absolute;
+    border-radius: 16px;
+    align-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: space-between;
+    border-top: 1px solid #f1f1f5;
+    box-shadow: 0 0 1px 0 rgba(29,34,40,.1),0 2px 4px 0 rgba(29,34,40,.08);
 }
 .container-dash {
-  background: white;
-  border-radius: 16px;
-  padding: 30px 30px;
-  margin-bottom: 25px;
-  border-top: 1px solid #f1f1f5;
-  box-shadow: 0 0 1px 0 rgba(29,34,40,.1),0 2px 4px 0 rgba(29,34,40,.08);
-  margin-top: 10px;
+    margin-top: 10px;
+    padding: 30px 30px;
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border-top: 1px solid #f1f1f5;
+    box-shadow: 0 0 1px 0 rgba(29,34,40,.1),0 2px 4px 0 rgba(29,34,40,.08);
 }
 .container-view {
-  background: white;
-  border-radius: 16px;
-  padding: 30px 30px;
-  border-top: 1px solid #f1f1f5;
-  box-shadow: 0 0 1px 0 rgba(29, 34, 40, .1), 0 2px 4px 0 rgba(29, 34, 40, .08);
+    padding: 30px 30px;
+    background: white;
+    border-radius: 16px;
+    border-top: 1px solid #f1f1f5;
+    box-shadow: 0 0 1px 0 rgba(29, 34, 40, .1), 0 2px 4px 0 rgba(29, 34, 40, .08);
 }
 #compose-view {
-  background: white;
-  border-radius: 16px;
-  padding: 30px 30px;
-  border-top: 1px solid #f1f1f5;
-  box-shadow: 0 0 1px 0 rgba(29, 34, 40, .1), 0 2px 4px 0 rgba(29, 34, 40, .08);
+    padding: 30px 30px;
+    background: white;
+    border-radius: 16px;
+    border-top: 1px solid #f1f1f5;
+    box-shadow: 0 0 1px 0 rgba(29, 34, 40, .1), 0 2px 4px 0 rgba(29, 34, 40, .08);
 }
 #emailBody {
-  min-height: 350px;
-  border: 1px solid #f1f1f5;
-  padding: 15px;
-  border-radius: 15px;
+    padding: 15px;
+    min-height: 350px;
+    border-radius: 15px;
+    border: 1px solid #f1f1f5;
 }
 #replyButton {
-  width: 135px;
+    width: 135px;
 }
 .col {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
 }
 .form-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .form-control {
-  border: 0;
-  border-bottom: 1px solid #0b800c;
-  width: 100%;
-  font-size: 20px;
+    border: 0;
+    width: 100%;
+    font-size: 20px;
+    border-bottom: 1px solid #0b800c;
 }
 .button-primary {
-  color: white;
-  background-color: #0b800c;
-  border: 1px solid transparent;
-  font-size: 15px;
-  font-weight: bold;
-  width: 100%;
-  padding: 15px;
-  border-radius: 25px;
-  cursor: pointer;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: #0b800c;
+    border: 1px solid transparent;
 }
 .button-dash {
-  width: 135px;
-  margin-top: 0;
+    width: 135px;
+    margin-top: 0;
 }
 .button-logout {
-  width: 175px;
-  text-align: center;
-  height: 43px;
-  align-items: center;
-  display: grid;
+    width: 175px;
+    height: 43px;
+    display: grid;
+    text-align: center;
+    align-items: center;
 }
 .button-send {
-  font-family: Nunito, Arial;
-  width: 135px;
-  margin-top: 25px;
-  font-size: 15px;
-  padding: 12px;
-  border: 1px solid transparent;
-  border-radius: 25px;
-  font-weight: bold;
-  color: white;
-  background-color: #0b800c;
-  cursor: pointer;
+    font-family: Nunito, Arial;
+    width: 135px;
+    padding: 12px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: #0b800c;
+    border: 1px solid transparent;
 }
 .button-email-view {
-  width: 135px;
-  margin-top: 0;
-  margin-left: auto;
+    width: 135px;
+    margin-top: 0;
+    margin-left: auto;
 }
 .button-email-archieve {
-  width: 135px;
-  margin-top: 0;
-  margin-left: 10px;
+    width: 135px;
+    margin-top: 0;
+    margin-left: 10px;
 }
 .error {
-  color: red;
-  margin-bottom: 10px;
+    color: red;
+    margin-bottom: 10px;
 }
 .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-/* Single email styling  */
 .email {
-  line-height: 30px;
-  padding: 10px;
-  padding-left: 25px;
-  text-align: left;
-  overflow: hidden;
-  border-radius: 15px;
-  margin: 0;
-  border: 1px solid #f0f3f5;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  gap: 10px;
+    gap: 10px;
+    margin: 0;
+    display: flex;
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;
+    line-height: 30px;
+    padding-left: 25px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #f0f3f5;
 }
-
 .read {
-  background-color: #f0f3f5;
+    background-color: #f0f3f5;
 }
-
 .unread {
-  background-color: white;
+    background-color: white;
 }
-
 .archive {
-  margin-right: 10px;
+    margin-right: 10px;
 }

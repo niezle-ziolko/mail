@@ -2,72 +2,82 @@
 {% load static %}
 
 {% block body %}
-<div class="container-dash">
-  <div class="col">
-    <h2>{{ request.user.email }}</h2>
-    <img src="/static/logo-light.png" style="width:175px">
-  </div>
-  <div class="row">
-    <div>
-      <button class="button-dash" id="inbox">Inbox</button>
-      <button class="button-dash" id="compose">Compose</button>
-      <button class="button-dash" id="sent">Sent</button>
-      <button class="button-dash" id="archived">Archived</button>
+    <!-- Main container for the dashboard -->
+    <div class="container-dash">
+        <!-- Column for user information and logo -->
+        <div class="col">
+            <h2>{{ request.user.email }}</h2> <!-- Displays the user's email -->
+            <img src="/static/logo-light.png" style="width:175px"> <!-- Displays the logo -->
+        </div>
+        <!-- Row for navigation buttons and logout link -->
+        <div class="row">
+            <div>
+                <button class="button-dash" id="inbox">Inbox</button> <!-- Inbox button -->
+                <button class="button-dash" id="compose">Compose</button> <!-- Compose button -->
+                <button class="button-dash" id="sent">Sent</button> <!-- Sent button -->
+                <button class="button-dash" id="archived">Archived</button> <!-- Archived button -->
+            </div>
+            <div class="button-logout">
+                <a href="{% url 'logout' %}">Log Out</a> <!-- Log out link -->
+            </div>
+        </div>
     </div>
-      <div class="button-logout">
-        <a href="{% url 'logout' %}">Log Out</a>
-      </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container-view" id="emails-view">
 
-</div>
+    <!-- Container for displaying emails -->
+    <div class="container-view" id="emails-view">
+    </div>
 
-<!-- Div element 2: shows contents of single email. Bootstrap grid. Values plugged into via JS. -->
-<div id="email-view">
-  <div class="container">
-    <div class="container-view">
-      <div style="display: flex; gap: 25px;">
-      <div class="">
-        <p class="">From: </p>
-        <p>To: </p>
-        <p>Subject: </p>
-        <p>Recieved: </p>
-      </div>
-      <div class="">
-        <p id='from'></p>
-        <p id='to'></p>
-        <p id='subject'></p>
-        <p id='date'></p>
-      </div>
-      </div>
-      <div id="emailBody" class=""></div>
-      <button id='replyButton' class="">Reply</button>
+    <!-- Container for displaying a single email's details -->
+    <div id="email-view">
+        <div class="container">
+            <div class="container-view">
+                <div style="display: flex; gap: 25px;">
+                    <!-- Labels for email details -->
+                    <div>
+                        <p>From: </p>
+                        <p>To: </p>
+                        <p>Subject: </p>
+                        <p>Received: </p>
+                    </div>
+                    <!-- Dynamic content for email details -->
+                    <div>
+                        <p id='from'></p>
+                        <p id='to'></p>
+                        <p id='subject'></p>
+                        <p id='date'></p>
+                    </div>
+                </div>
+                <div id="emailBody"></div> <!-- Email body content -->
+                <button id='replyButton' class="">Reply</button> <!-- Reply button -->
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- Div element 3: shows compose email form -->
-<div id="compose-view">
-  <h3 id="NewOrReply"></h3>
-  <form id="compose-form">
-    <div class="form-group">
-      From: <input disabled class="form-control" value="{{ request.user.email }}">
+    <!-- Div element for the compose email form -->
+    <div id="compose-view">
+        <h3 id="NewOrReply"></h3> <!-- Header for composing or replying -->
+        <form id="compose-form">
+            <!-- Disabled input field showing the sender's email -->
+            <div class="form-group">
+                From: <input disabled class="form-control" value="{{ request.user.email }}">
+            </div>
+            <!-- Input field for the recipient's email -->
+            <div class="form-group">
+                To: <input id="compose-recipients" class="form-control">
+            </div>
+            <!-- Input field for the subject of the email -->
+            <div class="form-group">
+                <input class="form-control" id="compose-subject" placeholder="Subject">
+            </div>
+            <!-- Textarea for the body of the email -->
+            <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
+            <!-- Submit button to send the email -->
+            <input type="submit" class="button-send" value="Send"/>
+        </form>
     </div>
-    <div class="form-group">
-      To: <input id="compose-recipients" class="form-control">
-    </div>
-    <div class="form-group">
-      <input class="form-control" id="compose-subject" placeholder="Subject">
-    </div>
-    <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
-    <input type="submit" class="button-send" value="Send"/>
-  </form>
-</div>
 {% endblock %}
 
 {% block script %}
-<script src="{% static 'inbox.js' %}"></script>
+    <!-- Link to the JavaScript file for inbox functionality -->
+    <script src="{% static 'script.js' %}"></script>
 {% endblock %}

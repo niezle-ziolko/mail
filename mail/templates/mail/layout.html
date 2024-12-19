@@ -4,19 +4,19 @@
 <html lang="en">
 
 <head>
-  <title>{% block title %}CS50W Mail{% endblock %}</title>
-  <link rel="stylesheet" href="{% static 'styles.css' %}">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="{% static 'favicon.ico' %}" /> <!-- Icon from https://www.stockio.com/free-icon/stationery-envelope -->
-  {% block script %}
-  {% endblock %}
+    <title>{% block title %}CS50W Mail{% endblock %}</title> <!-- Dynamic title block -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Link to the main stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> <!-- Google Font Nunito -->
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.ico' %}" /> <!-- Favicon for the page -->
+    {% block script %}
+    {% endblock %} <!-- Placeholder for additional scripts -->
 </head>
 
 <body>
-  <div class="container">
-    {% block body %}
-    {% endblock %}
-  </div>
+    <div class="container"> <!-- Main container for the page content -->
+        {% block body %}
+        {% endblock %} <!-- Placeholder for the body content -->
+    </div>
 </body>
 
 </html>
