@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = event.target.dataset.email;
 
     // Check if the user clicked view button and, if so, view that email
-    if (event.target.className === 'btn btn-sm btn-primary view float-right') {
+    if (event.target.className === 'button-email-view') {
       view_email(email);
     }
 
     // Check if the user clicked archive button and, if so, archive email and return to inbox view
-    else if (event.target.className === 'btn btn-sm btn-secondary archive float-right') {
+    else if (event.target.className === 'button-email-archieve') {
       archive_email(email);
     }
   });
@@ -112,11 +112,11 @@ function load_mailbox(mailbox) {
 
           const item = document.createElement("div");
           item.className = "email";
-          item.innerHTML = `Email from <b>${emails[email].sender}</b> recieved <b>${emails[email].timestamp}</b>. Subject: <b>${emails[email].subject}</b>.`
+          item.innerHTML = `Email from: <b>${emails[email].sender}</b> recieved <b>${emails[email].timestamp}</b> Subject: <b>${emails[email].subject}</b>`
 
           // Add view button to div
           var viewButton = document.createElement("button");
-          viewButton.className = 'btn btn-sm btn-primary view float-right'
+          viewButton.className = 'button-email-view'
           viewButton.dataset.email = emails[email].id
           viewButton.innerHTML = "View"
           item.appendChild(viewButton)
@@ -131,7 +131,7 @@ function load_mailbox(mailbox) {
           // If email has NOT been archived, add archive button
           if (emails[email].archived === false) {
             var archiveButton = document.createElement("button");
-            archiveButton.className = 'btn btn-sm btn-secondary archive float-right'
+            archiveButton.className = 'button-email-archieve'
             archiveButton.dataset.email = emails[email].id
             archiveButton.innerHTML = "Archive"
             item.appendChild(archiveButton)
@@ -164,7 +164,7 @@ function load_mailbox(mailbox) {
           item.innerHTML = `Email to <b>${emails[email].recipients}</b> sent <b>${emails[email].timestamp}</b>. Subject: <b>${emails[email].subject}</b>.`
 
           var viewButton = document.createElement("button");
-          viewButton.className = 'btn btn-sm btn-primary view float-right'
+          viewButton.className = 'button-email-view'
           viewButton.dataset.email = emails[email].id
           viewButton.innerHTML = "View"
           item.appendChild(viewButton)
@@ -191,17 +191,17 @@ function load_mailbox(mailbox) {
         for (let email in emails) {
           var archiveItem = document.createElement("div");
           archiveItem.className = "email";
-          archiveItem.innerHTML = `Email from <b>${emails[email].sender}</b> recieved <b>${emails[email].timestamp}</b>`
+          archiveItem.innerHTML = `Email from: <b>${emails[email].sender}</b> recieved <b>${emails[email].timestamp}</b>`
 
           var viewButton = document.createElement("button");
-          viewButton.className = 'btn btn-sm btn-primary view float-right'
+          viewButton.className = 'button-email-view'
           viewButton.dataset.email = emails[email].id
           viewButton.innerHTML = "View"
           archiveItem.appendChild(viewButton)
 
           if (emails[email].archived === true) {
             var archiveButton = document.createElement("button");
-            archiveButton.className = 'btn btn-sm btn-secondary archive float-right'
+            archiveButton.className = 'button-email-archieve'
             archiveButton.dataset.email = emails[email].id
             archiveButton.innerHTML = "Unarchive"
             archiveItem.appendChild(archiveButton)

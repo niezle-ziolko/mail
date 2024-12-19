@@ -2,54 +2,50 @@
 {% load static %}
 
 {% block body %}
-
-<!-- Bootstrap grid displaying user's email address, navigation buttons, and logo -->
-<div class="container">
+<div class="container-dash">
+  <div class="col">
+    <h2>{{ request.user.email }}</h2>
+    <img src="/static/logo-light.png" style="width:175px">
+  </div>
   <div class="row">
-    <div class="col">
-      <h2>{{ request.user.email }}</h2>
-      <div class="row">
-      </div>
-      <button class="btn btn-sm btn-outline-primary" id="inbox">Inbox</button>
-      <button class="btn btn-sm btn-outline-primary" id="compose">Compose</button>
-      <button class="btn btn-sm btn-outline-primary" id="sent">Sent</button>
-      <button class="btn btn-sm btn-outline-primary" id="archived">Archived</button>
-      <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
-      <div class="row">
-      </div>
+    <div>
+      <button class="button-dash" id="inbox">Inbox</button>
+      <button class="button-dash" id="compose">Compose</button>
+      <button class="button-dash" id="sent">Sent</button>
+      <button class="button-dash" id="archived">Archived</button>
     </div>
-    <div class="col text-right">
-      <!-- Custom logo. Adapted from: https://www.stockio.com/free-icon/stationery-envelope -->
-      <img src="/static/mail_logo.png" style="width:75px">
+      <div class="button-logout">
+        <a href="{% url 'logout' %}">Log Out</a>
+      </div>
+      </div>
     </div>
   </div>
 </div>
-<hr>
-
-<!-- Div element 1: shows contents of email inbox -->
-<div id="emails-view">
+<div class="container-view" id="emails-view">
 
 </div>
 
 <!-- Div element 2: shows contents of single email. Bootstrap grid. Values plugged into via JS. -->
 <div id="email-view">
-  <div class="container ">
-    <div class="row bg-light border border-primary mt-3 ">
-      <div class="col-2 font-weight-bold">
-        <p class="mt-2">From: </p>
+  <div class="container">
+    <div class="container-view">
+      <div style="display: flex; gap: 25px;">
+      <div class="">
+        <p class="">From: </p>
         <p>To: </p>
         <p>Subject: </p>
         <p>Recieved: </p>
       </div>
-      <div class="col-3 mt-2">
+      <div class="">
         <p id='from'></p>
         <p id='to'></p>
         <p id='subject'></p>
         <p id='date'></p>
       </div>
-      <div id="emailBody" class="col-7 mt-2 emailBody"></div>
+      </div>
+      <div id="emailBody" class=""></div>
+      <button id='replyButton' class="">Reply</button>
     </div>
-    <button id='replyButton' class="btn btn-primary float-right mt-3">Reply</button>
   </div>
 </div>
 
@@ -67,11 +63,11 @@
       <input class="form-control" id="compose-subject" placeholder="Subject">
     </div>
     <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
-    <input type="submit" class="btn btn-primary mt-3" />
+    <input type="submit" class="button-send" value="Send"/>
   </form>
 </div>
 {% endblock %}
 
 {% block script %}
-<script src="{% static 'mail/inbox.js' %}"></script>
+<script src="{% static 'inbox.js' %}"></script>
 {% endblock %}

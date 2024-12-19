@@ -1,11 +1,15 @@
 {% extends "mail/layout.html" %}
 
 {% block body %}
-    <img src="/static/logo-light.png" style="width:300px; margin-bottom: 80px;">
-    <h2>Register</h2>
+<div class="container-login">
+<div>
+    <img src="/static/logo-light.png" style="width:300px;">
+    <h2 style="margin-top: 80px;">Register</h2>
+</div>
+<div>
 
     {% if message %}
-        <div>{{ message }}</div>
+        <div class="error">{{ message }}</div>
     {% endif %}
 
     <form action="{% url 'register' %}" method="post">
@@ -23,5 +27,6 @@
     </form>
 
     <p style="font-size: 14px;">Already have an account? <a href="{% url 'login' %}">Log In here.</a></p>
-
+</div>
+</div>
 {% endblock %}
