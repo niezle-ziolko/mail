@@ -9,6 +9,10 @@ h3 {
 a {
     color: #0b800c;
 }
+a:hover {
+    color: #0ea411;
+    transition: all 0.3s;
+}
 button {
     width: 100%;
     padding: 12px;
@@ -109,9 +113,19 @@ input:disabled {
     background-color: #0b800c;
     border: 1px solid transparent;
 }
+.button-primary:hover {
+    transition: all 0.3s;
+    background-color: #0ea411;
+}
 .button-dash {
     width: 135px;
     margin-top: 0;
+}
+.button-dash:hover {
+    width: 135px;
+    margin-top: 0;
+    transition: all 0.3s;
+    background-color: #0ea411;
 }
 .button-logout {
     width: 175px;
@@ -133,15 +147,27 @@ input:disabled {
     background-color: #0b800c;
     border: 1px solid transparent;
 }
+.button-send:hover {
+    transition: all 0.3s;
+    background-color: #0ea411;
+}
 .button-email-view {
     width: 135px;
     margin-top: 0;
     margin-left: auto;
 }
+.button-email-view:hover {
+    transition: all 0.3s;
+    background-color: #0ea411;
+}
 .button-email-archieve {
     width: 135px;
     margin-top: 0;
     margin-left: 10px;
+}
+.button-email-archieve:hover {
+    transition: all 0.3s;
+    background-color: #0ea411;
 }
 .error {
     color: red;
