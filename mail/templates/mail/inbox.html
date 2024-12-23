@@ -7,7 +7,7 @@
         <!-- Column for user information and logo -->
         <div class="col">
             <h2>{{ request.user.email }}</h2> <!-- Displays the user's email -->
-            <img src="/static/logo-light.png" style="width:175px"> <!-- Displays the logo -->
+            <img src="/static/mail/logo.png" style="width:175px"> <!-- Displays the logo -->
         </div>
         <!-- Row for navigation buttons and logout link -->
         <div class="row">
@@ -79,5 +79,5 @@
 
 {% block script %}
     <!-- Link to the JavaScript file for inbox functionality -->
-    <script src="{% static 'script.js' %}"></script>
+    <script src="{% static 'mail/script.js' %}"></script>
 {% endblock %}
